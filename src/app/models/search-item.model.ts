@@ -1,4 +1,4 @@
-type ThumbnailsType = {
+type ThumbnailType = {
   url: string;
   width: number;
   height: number;
@@ -14,11 +14,11 @@ export interface ISearchItem {
     title: string;
     description: string;
     thumbnails: {
-      default: ThumbnailsType;
-      medium: ThumbnailsType;
-      high: ThumbnailsType;
-      standard: ThumbnailsType;
-      maxres: ThumbnailsType;
+      default: ThumbnailType;
+      medium: ThumbnailType;
+      high: ThumbnailType;
+      standard: ThumbnailType;
+      maxres: ThumbnailType;
     };
     channelTitle: string;
     tags: string[];
