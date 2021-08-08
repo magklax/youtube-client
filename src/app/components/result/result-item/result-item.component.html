@@ -1,4 +1,4 @@
-<div *ngIf="!!resultItem" class="item">
+<ng-container *ngIf="!!resultItem">
   <div>
     <img
       src="../../../../assets/images/result-item-1.png"
@@ -7,24 +7,24 @@
       alt="Podcast Cover"
     />
   </div>
-  <ul class="smm">
-    <li class="smm-item">
+  <ul class="statistics">
+    <li class="statistics-item">
       <img src="../../../../assets/images/view.svg" width="20" height="13" />
       <span>{{ resultItem.statistics.viewCount }}</span>
     </li>
-    <li>
+    <li class="statistics-item">
       <img src="../../../../assets/images/like.svg" width="15" height="13" />
       <span>{{ resultItem.statistics.likeCount }}</span>
     </li>
-    <li>
+    <li class="statistics-item">
       <img src="../../../../assets/images/dislike.svg" width="15" height="13" />
       <span>{{ resultItem.statistics.dislikeCount }}</span>
     </li>
-    <li>
+    <li class="statistics-item">
       <img src="../../../../assets/images/comment.svg" width="13" height="13" />
       <span>{{ resultItem.statistics.commentCount }}</span>
     </li>
   </ul>
   <h3 class="title">{{ resultItem.snippet.title }}</h3>
-  <a href="#" class="button">more...</a>
-</div>
+  <a class="button" href="#">more...</a>
+</ng-container>
