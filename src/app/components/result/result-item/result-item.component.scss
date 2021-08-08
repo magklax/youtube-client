@@ -1,0 +1,59 @@
+@import '../../../../assets/styles/variables.scss';
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 263px;
+    padding: 20px;
+    background-color: $A2;
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 4px rgba($A1, 0.25));
+
+    & > img {
+        width: 100%;
+        flex-grow: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 5px;
+        width: 100%;
+        background-color: $A4;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+.smm {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+        font-size: 10px;
+    }
+}
+
+.title {
+    align-self: flex-end;
+    margin-bottom: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $A3;
+}
+
+.button {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 6.5px 40px;
+    color: $A0;
+    background-color: $A4;
+    border-radius: 5px;
+    filter: drop-shadow(2px 0px 4px $A4);
+}

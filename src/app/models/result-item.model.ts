@@ -4,7 +4,7 @@ type ThumbnailType = {
   height: number;
 };
 
-export interface ISearchItem {
+export interface IResultItem {
   kind: string;
   etag: string;
   id: string;

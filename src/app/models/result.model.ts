@@ -1,11 +1,11 @@
-import { ISearchItem } from './search-item.model';
+import { IResultItem } from './result-item.model';
 
-export interface ISearchResponse {
+export interface IResult {
   kind: string;
   etag: string;
   pageInfo: {
     totalResults: number;
     resultsPerPage: number;
   };
-  items: ISearchItem;
+  items: IResultItem;
 }

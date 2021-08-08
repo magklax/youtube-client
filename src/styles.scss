@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './assets/styles/fonts';
+@import './assets/styles/variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, serif;
+    font-size: 12px;
+    line-height: 1.17;
+    font-weight: 400;
+    color: $A1;
+    background-color: $A2;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
