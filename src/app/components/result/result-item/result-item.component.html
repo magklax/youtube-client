@@ -1,7 +1,7 @@
 <ng-container *ngIf="!!resultItem">
   <div>
     <img
-      src="../../../../assets/images/result-item-1.png"
+      src="{{ resultItem.snippet.thumbnails.default.url }}"
       width="223"
       height="123"
       alt="Podcast Cover"

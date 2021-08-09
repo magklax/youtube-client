@@ -1,2 +1,2 @@
 <app-header (messageEvent)="receiveSearchText($event)"></app-header>
-<app-result [resultItems]="searchFilter: searchText"></app-result>
+<app-result *ngIf="searchText" [resultItems]="resultItems | searchFilter: searchText"></app-result>

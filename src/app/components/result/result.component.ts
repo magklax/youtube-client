@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IResultItem } from 'src/app/models/result-item.model';
 
 @Component({
@@ -6,10 +6,6 @@ import { IResultItem } from 'src/app/models/result-item.model';
   templateUrl: './result.component.html',
   styleUrls: ['./result.component.scss'],
 })
-export class ResultComponent implements OnInit {
+export class ResultComponent {
   @Input() resultItems: IResultItem[] = [];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
