@@ -1,2 +1,2 @@
-<app-header></app-header>
-<app-result [resultItems]="resultItems"></app-result>
+<app-header (messageEvent)="receiveSearchText($event)"></app-header>
+<app-result [resultItems]="searchFilter: searchText"></app-result>

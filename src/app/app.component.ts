@@ -9,5 +9,11 @@ import { resultItems } from './app.constans';
 export class AppComponent {
   title = 'youtube-client';
 
+  searchText = '';
+
+  receiveSearchText($event: any) {
+    this.searchText = $event;
+  }
+
   resultItems = resultItems;
 }

@@ -3,12 +3,13 @@
     <a class="logo" href="#">
       <img src="../../../assets/images/logo.png" width="50" height="50" alt="logo" />
     </a>
-    <form class="search-form">
+    <form class="search-form" (submit)="sendSearchText()">
       <input
         class="search-input"
         type="text"
         placeholder="What are you want to find out?"
         name="search"
+        [(ngModel)]="searchText"
       />
       <button class="search-button" type="submit">search</button>
     </form>
