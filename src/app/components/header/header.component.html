@@ -1,37 +1,49 @@
 <div class="header">
-  <a class="logo" href="#">
-    <img src="../../../assets/images/logo.png" width="50" height="50" alt="logo" />
-  </a>
-  <!-- TODO: move to separeted component -->
-  <form class="search-form" (submit)="sendSearchText()">
-    <input
-      class="search-input"
-      type="text"
-      placeholder="What are you want to find out?"
-      name="search"
-      [(ngModel)]="searchText"
-    />
-    <button class="search-button" type="submit">search</button>
-  </form>
-  <!-- TODO: move to separeted component -->
-  <button type="button" class="settings-button">
-    <img src="../../../assets/images/settings.svg" width="15" height="15" />
-  </button>
-  <!-- TODO: move to separeted component -->
-  <div class="user">
-    <span class="user-name">Your Name</span>
-    <a href="#" class="user-profile">
-      <img src="../../../assets/images/user.svg" width="19" height="19" />
+  <div class="header-row">
+    <a class="logo" href="#">
+      <img src="../../../assets/images/logo.png" width="50" height="50" alt="logo" />
     </a>
+    <!-- TODO: move to separeted component -->
+    <form class="search-form" (submit)="sendSearchText()">
+      <label for="header-search-input" class="visually-hidden">search</label>
+      <input
+        id="header-search-input"
+        class="search-input"
+        type="text"
+        placeholder="What are you want to find out?"
+        name="search"
+        [(ngModel)]="searchText"
+      />
+      <button class="search-button" type="submit">search</button>
+    </form>
+    <!-- TODO: move to separeted component -->
+    <button type="button" class="settings-button" (click)="toggleVisibility()">
+      <img src="../../../assets/images/settings.svg" width="15" height="15" />
+    </button>
+    <!-- TODO: move to separeted component -->
+    <div class="user">
+      <span class="user-name">Your Name</span>
+      <a href="#" class="user-profile">
+        <img src="../../../assets/images/user.svg" width="19" height="19" />
+      </a>
+    </div>
+    <!-- TODO: move to separeted component -->
   </div>
-  <!-- TODO: move to separeted component -->
-</div>
-<div class="sorting">
-  <span>Sorting by:</span>
-  <button class="sorting-button" type="button">date</button>
-  <button class="sorting-button" type="button">by word or sentance</button>
-  <form>
-    <label>by word or sentance</label>
-    <input type="text" />
-  </form>
+  <div *ngIf="collapsed" class="sorting">
+    <span>Sorting by:</span>
+    <ul class="sorting-list">
+      <li class="sorting-item">
+        <button class="sorting-button" type="button" (click)="sortBy('dates')">date</button>
+      </li>
+      <li class="sorting-item">
+        <button class="sorting-button" type="button" (click)="sortBy('views')">
+          count of views
+        </button>
+      </li>
+      <li class="sorting-item">
+        <label for="sort-by-keyword-input">by word or sentance</label>
+        <input id="sort-by-keyword-input" type="text" />
+      </li>
+    </ul>
+  </div>
 </div>

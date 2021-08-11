@@ -1,17 +1,16 @@
 @import '../../../assets/styles/variables.scss';
 
-:host {
-    background-color: $A2;
-}
-
-// TODO: move to separeted component
 .header {
-    position: relative;
-    margin: 0 auto;
-    padding: 15px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: $A2;
+
+    &-row {
+        position: relative;
+        margin: 0 auto;
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 // TODO: move to separeted component
@@ -93,14 +92,34 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    padding: 18px 0;
     color: $A5;
 
-    &-button {
+    &-list {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    &-item {
         margin: 0 10.5px;
+    }
+
+    &-button {
         color: $A4;
         font-size: 12px;
         text-decoration: underline;
         border: none;
         background-color: transparent;
+    }
+
+    label {
+        margin-right: 10px;
+        color: $A4;
+    }
+
+    input {
+        background-color: $A0;
+        border: none;
     }
 }

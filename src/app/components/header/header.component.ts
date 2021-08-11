@@ -10,7 +10,17 @@ export class HeaderComponent {
 
   @Output() messageEvent = new EventEmitter<string>();
 
+  collapsed = false;
+
+  toggleVisibility() {
+    this.collapsed = !this.collapsed;
+  }
+
   sendSearchText() {
     this.messageEvent.emit(this.searchText);
+  }
+
+  sortBy(value: string) {
+    console.log(value);
   }
 }
